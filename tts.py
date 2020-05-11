@@ -11,10 +11,6 @@ from gtts import gTTS       # Google Text To Speech
 from pathlib import Path
 import os,time,random
 
-# VAR
-idioma=''       # Nos dice el idioma al que se va a traducir
-opt1=False      # Nos dice si el programa va a recoger un texto escrito en el momento por el usuario o si va a recibir un FILE con el texto en el.
-
 # ==================================================SUBPROGRAMAS========================================================================
 # LIMPIA LA PANTALLA
 def clear():
@@ -35,25 +31,25 @@ def main():
         archivo = input('METE EL PATH:\n')        # GUARDA LA RUTA DEL ARCHIVO DE TXT A CONVERTIR
         if archivo!='Xabierland':
             try:
-                arc_text = open(archivo,'r',encoding='cp1252')                      # ABRE EL ARCHIVO TXT Y GUARDA EL TEXTO DEL INTERIOR EN UNA VARIABLE
-            except Exception as e:                                                  # EN CASO DE ERROR SALTA ESTO
+                arc_text = open(archivo,'r',encoding='cp1252')                  # ABRE EL ARCHIVO TXT Y GUARDA EL TEXTO DEL INTERIOR EN UNA VARIABLE
+            except Exception as e:                                              # EN CASO DE ERROR SALTA ESTO
                 print("EXCEPCIÓN {}\n".format(e))
                 input("Pulsa cualquier tecla para continuar...")
                 clear()
             else:
                 file_name=get_file_name(archivo)
-                tts = gTTS(arc_text.read(), lang='es')                              # LEE EL TEXTO Y LO CONVIERTE A LA VARIABLE TTS
-                arc_text.close()                                                    # CIERRA EL ARCHIVO DE TXT
+                tts = gTTS(arc_text.read(), lang='es')                          # LEE EL TEXTO Y LO CONVIERTE A LA VARIABLE TTS
+                arc_text.close()                                                # CIERRA EL ARCHIVO DE TXT
                 try:
-                    base, ext = os.path.split(archivo)                              # DIVIDE LA RUTA EN BASE Y EXTENSION
-                    if os.path.isabs(base):                                         # COMPRUEBA LA RUTA
-                        base = base+'/'                                             # CONVIERTE LA BASE
+                    base, ext = os.path.split(archivo)                          # DIVIDE LA RUTA EN BASE Y EXTENSION
+                    if os.path.isabs(base):                                     # COMPRUEBA LA RUTA
+                        base = base+'/'                                         # CONVIERTE LA BASE
                     print("\nEspera...")
-                    tts.save(base + file_name +'.mp3')                              # GUARDA EL ARCHIVO
-                except Exception as e:                                              # EN CASO DE ERROR SALTA ESTO
+                    tts.save(base + file_name +'.mp3')                          # GUARDA EL ARCHIVO
+                except Exception as e:                                          # EN CASO DE ERROR SALTA ESTO
                     print("EXCEPCIÓN {}".format(e))
                     input("Pulsa cualquier tecla para continuar...")
-                clear()                                                             # LIMPIA LA PANTALLA
+                clear()                                                         # LIMPIA LA PANTALLA
         else:
             archivo=''
             salir=False
