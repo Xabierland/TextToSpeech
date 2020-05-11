@@ -5,9 +5,16 @@ Pequeño programa de no mas de 60 lineas para convertir texto a voz usando el tr
 - La ruta del archivo no debe tener ni "" ni & para que el programa la lea correctamente. En caso de que no se cumpla puede provocar crasheos
 - Los archivos se sobreescriben en caso de tener el mismo nombre.
 
-# Instalacion
+# Requerimientos
 - Tener instalado Python https://www.python.org/downloads/
 - Instalar el paquete gTTS ~pip install gtts
+
+# Uso
+- Opcion 1
+-- Crear un archivo .exe mediante el pyinstaller
+- Opcion 2
+-- Ejecutarlo desde la cmd o terminal mediante python3 'nombre.py'
+
 # Creditos
 Programa creado el 11/05/2020 por Xabier Gabiña ak.Xabierland
 
