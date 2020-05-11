@@ -15,7 +15,7 @@ import os,time,random
 idioma=''       # Nos dice el idioma al que se va a traducir
 opt1=False      # Nos dice si el programa va a recoger un texto escrito en el momento por el usuario o si va a recibir un FILE con el texto en el.
 
-# =============================================================================SUBPROGRAMAS============================================================================================
+# ==================================================SUBPROGRAMAS========================================================================
 # LIMPIA LA PANTALLA
 def clear():
     if os.name == "posix":
@@ -29,14 +29,14 @@ def get_file_name(archivo):
     index_of_dot = file_name.index('.')
     file_name_without_extension = file_name[:index_of_dot]
     return(file_name_without_extension)
-# ========================================================================PROGRAMA PRINCIPAL============================================================================================
+# ==============================================PROGRAMA PRINCIPAL======================================================================
 def main():
     while True:
         archivo = input('METE EL PATH:\n')        # GUARDA LA RUTA DEL ARCHIVO DE TXT A CONVERTIR
         if archivo!='Xabierland':
             try:
                 arc_text = open(archivo,'r',encoding='cp1252')                      # ABRE EL ARCHIVO TXT Y GUARDA EL TEXTO DEL INTERIOR EN UNA VARIABLE
-            except Exception as e:                                              # EN CASO DE ERROR SALTA ESTO
+            except Exception as e:                                                  # EN CASO DE ERROR SALTA ESTO
                 print("EXCEPCIÓN {}\n".format(e))
                 input("Pulsa cualquier tecla para continuar...")
                 clear()
