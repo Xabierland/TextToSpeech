@@ -34,7 +34,7 @@ def main():
     while True:
         archivo = input('METE EL PATH:\n')        # GUARDA LA RUTA DEL ARCHIVO DE TXT A CONVERTIR
         file_name=get_file_name(archivo)
-        arc_text = open(archivo,'r')                                        # ABRE EL ARCHIVO TXT Y GUARDA EL TEXTO DEL INTERIOR EN UNA VARIABLE
+        arc_text = open(archivo,'r',encoding='cp1252')                      # ABRE EL ARCHIVO TXT Y GUARDA EL TEXTO DEL INTERIOR EN UNA VARIABLE
         tts = gTTS(arc_text.read(), lang='es')                              # LEE EL TEXTO Y LO CONVIERTE A LA VARIABLE TTS
         arc_text.close()                                                    # CIERRA EL ARCHIVO DE TXT
         try:
