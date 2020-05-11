@@ -2,7 +2,7 @@
 Pequeño programa de no mas de 60 lineas para convertir texto a voz usando el traductor de google.
 - El programa solo esta en español.
 - El archivo .txt tiene que estar en coding ANSI.
-- La ruta del archivo no debe tener ni "" ni & para que el programa la lea correctamente. En caso de que no se cumpla puede provocar crasheos
+- La ruta del archivo no debe tener ni "" ni & ni '' para que el programa la lea correctamente. En caso de que no se cumpla puede provocar crasheos
 - Los archivos se sobreescriben en caso de tener el mismo nombre.
 
 # Requerimientos
