@@ -11,10 +11,6 @@ from gtts import gTTS       # Google Text To Speech
 from pathlib import Path
 import os,time,random
 
-# VAR
-idioma=''       # Nos dice el idioma al que se va a traducir
-opt1=False      # Nos dice si el programa va a recoger un texto escrito en el momento por el usuario o si va a recibir un FILE con el texto en el.
-
 # ==================================================SUBPROGRAMAS========================================================================
 # LIMPIA LA PANTALLA
 def clear():
