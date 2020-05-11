@@ -32,7 +32,7 @@ def get_file_name(archivo):
 # ========================================================================PROGRAMA PRINCIPAL============================================================================================
 def main():
     while True:
-        archivo = input('Ingresa el archivo con la ruta completa: ')        # GUARDA LA RUTA DEL ARCHIVO DE TXT A CONVERTIR
+        archivo = input('METE EL PATH:\n')        # GUARDA LA RUTA DEL ARCHIVO DE TXT A CONVERTIR
         file_name=get_file_name(archivo)
         arc_text = open(archivo,'r')                                        # ABRE EL ARCHIVO TXT Y GUARDA EL TEXTO DEL INTERIOR EN UNA VARIABLE
         tts = gTTS(arc_text.read(), lang='es')                              # LEE EL TEXTO Y LO CONVIERTE A LA VARIABLE TTS
@@ -41,6 +41,7 @@ def main():
             base, ext = os.path.split(archivo)                              # DIVIDE LA RUTA EN BASE Y EXTENSION
             if os.path.isabs(base):                                         # COMPRUEBA LA RUTA
                 base = base+'/'                                             # CONVIERTE LA BASE
+            print("\nEspera...")
             tts.save(base + file_name +'.mp3')                              # GUARDA EL ARCHIVO
         except Exception as e:                                              # EN CASO DE ERROR SALTA ESTO
             print("EXCEPCIÓN {}".format(e))
