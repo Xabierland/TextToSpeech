@@ -14,7 +14,7 @@ Pequeño programa de no mas de 60 lineas para convertir texto a voz usando el tr
 -- Crear un archivo .exe mediante el pyinstaller
 - Opcion 2
 -- Ejecutarlo desde la cmd o terminal mediante python3 'nombre.py'
-https://prnt.sc/sest55
+https://raw.githubusercontent.com/Xabierland/TextToSpeech/master/assets/tts.png
 
 # Creditos
 Programa creado el 11/05/2020 por Xabier Gabiña ak.Xabierland
